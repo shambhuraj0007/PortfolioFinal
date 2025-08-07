@@ -3,7 +3,7 @@ const certificateCards = [
     title: "Full Stack Web Development",
     issuer: "College Wallah",
     date: "2023",
-    imgPath: "/images/cert1.png",
+    imgPath: "assets/cert1.png",
     description: "Completed a comprehensive course covering MERN stack, REST APIs, and deployment strategies. Built multiple full-stack applications with modern web technologies.",
     link: "https://drive.google.com/file/d/1fmR8WSpVgTW9NTJDWBaDhtwCLdtazu4Z/view?usp=drivesdk",
     verificationLink: "https://www.apnacollege.in/"
@@ -12,7 +12,7 @@ const certificateCards = [
     title: "Deep Learning Specialization",
     issuer: "NVIDIA Deep Learning Institute",
     date: "2024",
-    imgPath: "/images/cert2.png",
+    imgPath: "assets/cert2.png",
     description: "Mastered neural networks, CNNs, and sequence models with TensorFlow. Developed AI models with 96%+ accuracy for real-world applications.",
     link: "https://drive.google.com/file/d/1EaEek27_l7OUDKJiqD5ik9FHI0nabL3l/view?usp=drivesdk",
     verificationLink: "https://www.nvidia.com/en-us/"
@@ -21,7 +21,7 @@ const certificateCards = [
     title: "JAVA with DSA",
     issuer: "PW Skills",
     date: "2025",
-    imgPath: "/images/cert3.png",
+    imgPath:"assets/cert3.png",
     description: "Comprehensive course covering Java programming fundamentals and Data Structures & Algorithms. Solved 250+ DSA problems across multiple platforms.",
 
         link: "https://drive.google.com/file/d/1DzJjSYksO2ubiq5M4V1MY1qJzjCArO_4/view?usp=drivesdk",
