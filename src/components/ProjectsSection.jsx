@@ -75,7 +75,7 @@ export const ProjectsSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors"
-                    >Demo
+                    ><button>Demo</button>
                       <ExternalLink size={20} />
                     </a>
                     <a
@@ -83,7 +83,7 @@ export const ProjectsSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors"
-                    >Source Code
+                    ><buttom>Source Code</buttom>
                       <Github size={20} />
                     </a>
                   </div>
