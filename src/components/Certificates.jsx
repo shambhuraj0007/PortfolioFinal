@@ -5,8 +5,8 @@ const certificateCards = [
     date: "2023",
     imgPath: "/images/cert1.png",
     description: "Completed a comprehensive course covering MERN stack, REST APIs, and deployment strategies. Built multiple full-stack applications with modern web technologies.",
-    link: "https://courses.nvidia.com/certificate/def456",
-    verificationLink: "https://verify.collegewallah.com/abc123"
+    link: "https://drive.google.com/file/d/1DzJjSYksO2ubiq5M4V1MY1qJzjCArO_4/view?usp=drivesdk",
+    verificationLink: "https://www.apnacollege.in/"
   },
   {
     title: "Deep Learning Specialization",
@@ -14,8 +14,8 @@ const certificateCards = [
     date: "2024",
     imgPath: "/images/cert2.png",
     description: "Mastered neural networks, CNNs, and sequence models with TensorFlow. Developed AI models with 96%+ accuracy for real-world applications.",
-    link: "https://courses.nvidia.com/certificate/def456",
-    verificationLink: "https://verify.nvidia.com/def456"
+    link: "https://drive.google.com/file/d/1EaEek27_l7OUDKJiqD5ik9FHI0nabL3l/view?usp=drivesdk",
+    verificationLink: "https://www.nvidia.com/en-us/"
   },
   {
     title: "JAVA with DSA",
@@ -23,8 +23,8 @@ const certificateCards = [
     date: "2025",
     imgPath: "/images/cert3.png",
     description: "Comprehensive course covering Java programming fundamentals and Data Structures & Algorithms. Solved 250+ DSA problems across multiple platforms.",
-    link: "https://certificates.pwskills.com/certificate/ghi789",
-    verificationLink: "https://verify.pwskills.com/ghi789"
+    link: "https://drive.google.com/file/d/1fmR8WSpVgTW9NTJDWBaDhtwCLdtazu4Z/view?usp=drivesdk",
+    verificationLink: "https://pwskills.com/"
   }
 ];
 
