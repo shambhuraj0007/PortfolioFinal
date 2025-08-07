@@ -68,26 +68,19 @@ export const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-4">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/80 hover:text-primary transition-colors"
-                    ><button className="text-blue-500"><ExternalLink size={20} />Demo</button>
-                      
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/80 hover:text-primary transition-colors"
-                    ><button className="text-blue-500"><Github size={20} />Source Code</button>
-                      
-                    </a>
-                  </div>
-                </div>
+                <div className="flex space-x-4">
+  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+    <button className="flex items-center gap-1 px-5 sm:px-10 py-3 rounded text-md text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-400 dark:hover:bg-blue-500">
+      <ExternalLink size={18} /> Demo
+    </button>
+  </a>
+  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+    <button className="flex items-center gap-1 px-5 sm:px-10 py-3 rounded text-md text-white bg-gray-800 hover:bg-gray-700 dark:bg-gray-200 dark:text-black dark:hover:bg-gray-300">
+      <Github size={20} /> Code
+    </button>
+  </a>
+</div>
+
               </div>
             </div>
           ))}
