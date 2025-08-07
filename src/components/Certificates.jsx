@@ -5,7 +5,7 @@ const certificateCards = [
     date: "2023",
     imgPath: "/images/cert1.png",
     description: "Completed a comprehensive course covering MERN stack, REST APIs, and deployment strategies. Built multiple full-stack applications with modern web technologies.",
-    link: "https://drive.google.com/file/d/1DzJjSYksO2ubiq5M4V1MY1qJzjCArO_4/view?usp=drivesdk",
+    link: "https://drive.google.com/file/d/1fmR8WSpVgTW9NTJDWBaDhtwCLdtazu4Z/view?usp=drivesdk",
     verificationLink: "https://www.apnacollege.in/"
   },
   {
@@ -23,7 +23,8 @@ const certificateCards = [
     date: "2025",
     imgPath: "/images/cert3.png",
     description: "Comprehensive course covering Java programming fundamentals and Data Structures & Algorithms. Solved 250+ DSA problems across multiple platforms.",
-    link: "https://drive.google.com/file/d/1fmR8WSpVgTW9NTJDWBaDhtwCLdtazu4Z/view?usp=drivesdk",
+
+        link: "https://drive.google.com/file/d/1DzJjSYksO2ubiq5M4V1MY1qJzjCArO_4/view?usp=drivesdk",
     verificationLink: "https://pwskills.com/"
   }
 ];
