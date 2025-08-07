@@ -83,7 +83,7 @@ export const ProjectsSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors"
-                    ><button className="text-blue-500">><Github size={20} />Source Code</button>
+                    ><button className="text-blue-500"><Github size={20} />Source Code</button>
                       
                     </a>
                   </div>
