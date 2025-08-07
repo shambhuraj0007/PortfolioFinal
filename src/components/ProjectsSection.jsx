@@ -75,16 +75,16 @@ export const ProjectsSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors"
-                    ><button>Demo</button>
-                      <ExternalLink size={20} />
+                    ><button><ExternalLink size={20} />Demo</button>
+                      
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors"
-                    ><buttom>Source Code</buttom>
-                      <Github size={20} />
+                    ><button><Github size={20} />Source Code</button>
+                      
                     </a>
                   </div>
                 </div>
