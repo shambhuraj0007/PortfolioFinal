@@ -6,6 +6,7 @@ import {
   Code2,
   ExternalLink,
 } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   {
@@ -81,8 +82,10 @@ export const HeroSection = () => {
           <a href="#projects" className="cosmic-button">
             View My Work
           </a>
+          
         </div>
       </div>
+      <div className="mt-4">  <ThemeToggle className="absolute bottom-4 right-4 z-10 pt-2" /></div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
         <span className="text-sm text-muted-foreground mb-2">Scroll</span>
