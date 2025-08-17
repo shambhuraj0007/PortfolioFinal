@@ -3,16 +3,18 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
+
+    if (storedTheme === "light") {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    } else {
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
+      localStorage.setItem("theme", "dark");
     }
   }, []);
 
@@ -32,8 +34,7 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outlin-hidden"
+        "flex items-center space-x-2 p-2 rounded-full transition-colors duration-300"
       )}
     >
       {isDarkMode ? (
@@ -41,6 +42,7 @@ export const ThemeToggle = () => {
       ) : (
         <Moon className="h-6 w-6 text-blue-900" />
       )}
+      <span>{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
     </button>
   );
 };
