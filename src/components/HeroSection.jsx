@@ -82,14 +82,21 @@ export const HeroSection = () => {
           <a href="#projects" className="cosmic-button">
             View My Work
           </a>
-          
         </div>
       </div>
-      <div className="mt-4">  <ThemeToggle className="absolute bottom-4 right-4 z-10 pt-2" /></div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2">Scroll</span>
-        <ArrowDown className="h-5 w-5 text-primary" />
+      {/* Bottom Center: ThemeToggle above arrow */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4 z-20">
+        {/* Theme toggle button */}
+        <ThemeToggle />
+
+        {/* Scroll arrow with hover glow */}
+        <div className="flex flex-col items-center animate-bounce cursor-pointer group">
+          <span className="text-sm text-muted-foreground mb-2">Scroll</span>
+          <ArrowDown
+            className="h-6 w-6 text-primary transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(205,124,46,0.9)]"
+          />
+        </div>
       </div>
     </section>
   );
