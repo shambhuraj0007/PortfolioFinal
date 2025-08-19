@@ -83,7 +83,7 @@ Gadhave
 </div>
 
   </div>    
-  <div className="mt-4">  <ThemeToggle className="absolute bottom-4 right-4 z-10 pt-2" /></div>      <div className="absolute bottom-8 mt-2 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">    
+  <div className="mt-4">  <ThemeToggle className="absolute bottom-4 right-4 z-10 pt-2" /></div>      <div className="absolute bottom-8 mt-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">    
     <span className="text-sm text-muted-foreground mt-2">Scroll</span>    
     <ArrowDown className="h-5 w-5 text-primary" />    
   </div>    
