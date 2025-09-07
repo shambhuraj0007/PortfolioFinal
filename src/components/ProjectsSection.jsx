@@ -13,6 +13,16 @@ const projects = [
   },
   {
     id: 2,
+    title: "ResumeItNow - AI Resume Builder",
+    description:
+      "AI-powered resume builder with modern ATS-friendly templates, live preview, PDF export, and smart content suggestions.",
+    image: "/assets/pr3.png",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Firebase", "OpenAI"],
+    demoUrl: "https://resume-virid-iota.vercel.app/",
+    githubUrl: "https://github.com/shambhuraj0007/Resume",
+  },
+  {
+    id: 3,
     title: "Plant Disease Detector",
     description:
       "AI-powered app using deep learning to detect plant diseases. Built with Streamlit and TensorFlow for fast, accurate predictions.",
