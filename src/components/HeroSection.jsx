@@ -31,7 +31,7 @@ icon: <ExternalLink className="w-5 h-5" />,
 },
 {
 name: "Resume",
-link: "https://drive.google.com/file/d/1xeYZOJiDc2-jP3a1L1R2zNED3-Wv_Seq/view?usp=sharing",
+link: "https://drive.google.com/file/d/1PjvOBQvTEBzaEmFUSb85Pss1vhJv-tJK/view?usp=sharing",
 icon: <FileText className="w-5 h-5" />,
 },
 ];
