@@ -159,3 +159,7 @@
   @apply transition-transform duration-300 hover:scale-[1.02];
 }
 
+@utility glass-card {
+  @apply bg-white/10 dark:bg-black/20 backdrop-blur-lg shadow-[0_8px_32px_0_rgba(31,38,135,0.05)];
+}
+

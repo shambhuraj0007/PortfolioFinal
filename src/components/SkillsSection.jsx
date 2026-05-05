@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 const skills = [
   // Frontend
@@ -103,6 +104,21 @@ const skills = [
 
 const categories = ["all", "frontend", "backend", "tools", "languages"];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1, scale: 1, transition: { type: "spring", stiffness: 100 }
+  },
+};
+
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -111,45 +127,63 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
-        </h2>
+    <section id="skills" className="py-24 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-secondary/10 -z-10 -skew-y-3 transform origin-bottom-right"></div>
+      
+      <motion.div 
+        className="container mx-auto max-w-5xl relative z-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+      >
+        <motion.h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" variants={itemVariants}>
+          My <span className="text-primary text-glow">Skills</span>
+        </motion.h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <motion.div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-14" variants={itemVariants}>
           {categories.map((category, key) => (
             <button
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-6 py-2.5 rounded-full transition-all duration-300 capitalize font-medium text-sm sm:text-base border border-border/50",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary/50"
+                  ? "bg-primary text-primary-foreground shadow-[0_0_15px_rgba(255,165,0,0.4)] scale-105 border-primary"
+                  : "glass-card text-foreground hover:bg-secondary/50 hover:scale-105"
               )}
             >
               {category}
             </button>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill, key) => (
-            <div
-              key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover flex items-center gap-4"
-            >
-              <img
-                src={skill.logo}
-                alt={`${skill.name} logo`}
-                className="w-12 h-12 object-contain"
-              />
-              <h3 className="font-semibold text-lg">{skill.name}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
+        <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <AnimatePresence>
+            {filteredSkills.map((skill, key) => (
+              <motion.div
+                layout
+                key={skill.name}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, scale: 0.8 }}
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 border border-border/50 group"
+              >
+                <div className="w-16 h-16 p-3 rounded-full bg-white/5 flex items-center justify-center group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-shadow duration-300">
+                  <img
+                    src={skill.logo}
+                    alt={`${skill.name} logo`}
+                    className="w-full h-full object-contain filter group-hover:brightness-110 transition-all"
+                  />
+                </div>
+                <h3 className="font-semibold text-base text-center group-hover:text-primary transition-colors">{skill.name}</h3>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
