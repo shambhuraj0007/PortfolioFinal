@@ -7,7 +7,7 @@ const certificateCards = [
     issuer: "MindMach Technologies",
     date: "2026", 
     imgPath: "/Certificate/IMG_20260328_114516_8771.png", 
-    description: "Formal internship experience engaging in full-stack software development, demonstrating practical industry exposure and the ability to contribute to production-level engineering.",
+    description: "Formal internship experience engaging in full-stack software development, demonstrating practical industry exposure and the ability to contribute to production-level engineering.[...]",
     link: "https://drive.google.com/file/d/1vw8z0Bu96iLaDualXMKG4J7DaPzrXfiW/view", 
     verificationLink: "https://drive.google.com/file/d/1vw8z0Bu96iLaDualXMKG4J7DaPzrXfiW/view"
   },
@@ -16,7 +16,7 @@ const certificateCards = [
     issuer: "Codtech IT Solutions",
     date: "2026", 
     imgPath: "/Certificate/1.png", 
-    description: "A 4-week internship focused on Machine Learning, showcasing the practical application of AI/ML concepts, technical dedication, and problem-solving within a corporate environment.",
+    description: "A 4-week internship focused on Machine Learning, showcasing the practical application of AI/ML concepts, technical dedication, and problem-solving within a corporate environment.[...]",
     link: "https://drive.google.com/file/d/1jKBKK8p9HF2-eM8k53sV7qbb0vlk3Vag/view", 
     verificationLink: "https://drive.google.com/file/d/1jKBKK8p9HF2-eM8k53sV7qbb0vlk3Vag/view"
   },
@@ -88,7 +88,7 @@ const certificateCards = [
     issuer: "Accenture",
     date: "2025", 
     imgPath: "/Certificate/Shambhuraj Suresh Gadhave- Go for Gold-iAspire certificate_20260123_191122.png", 
-    description: "Recognition for achieving the 'Gold level' in Accenture's iAspire talent program, demonstrating competitive problem-solving and proactive engagement with a leading IT consulting firm.",
+    description: "Recognition for achieving the 'Gold level' in Accenture's iAspire talent program, demonstrating competitive problem-solving and proactive engagement with a leading IT consulting [...]",
     link: "https://drive.google.com/file/d/1_F68NVTDRwu-BLVVMeKJYMcu6cfiSxMP/view", 
     verificationLink: "https://drive.google.com/file/d/1_F68NVTDRwu-BLVVMeKJYMcu6cfiSxMP/view"
   },
@@ -128,31 +128,31 @@ const itemVariants = {
 };
 
 const Certificates = () => (
-  <section id="certificates" className="py-24 px-4 relative overflow-hidden">
-    <div className="container mx-auto max-w-7xl relative z-10">
+  <section id="certificates" className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden w-full">
+    <div className="w-full max-w-7xl mx-auto relative z-10">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
-        <motion.h2 className="text-3xl md:text-4xl font-bold mb-4 text-center" variants={itemVariants}>
+        <motion.h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center px-2" variants={itemVariants}>
           My <span className="text-primary text-glow">Certificates</span>
         </motion.h2>
 
-        <motion.p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto" variants={itemVariants}>
+        <motion.p className="text-center text-muted-foreground mb-12 sm:mb-16 max-w-2xl mx-auto text-sm sm:text-base px-2" variants={itemVariants}>
           Here are some of the certifications and internships I have completed, showcasing my continuous learning and practical experience.
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {certificateCards.map((cert, idx) => (
             <motion.div
               key={idx}
               variants={itemVariants}
-              className="group glass-card rounded-2xl p-5 flex flex-col gap-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,165,0,0.2)] border border-border/50 bg-background/40"
+              className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 flex flex-col gap-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,165,0,0.2)] border border-border/50"
             >
-              <div className="flex flex-col items-center sm:flex-row sm:items-start gap-4">
-                <div className="w-20 h-20 shrink-0 bg-white/5 rounded-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-16 sm:w-20 h-16 sm:h-20 shrink-0 bg-white/5 rounded-lg sm:rounded-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
                   <img
                     src={cert.imgPath}
                     alt={cert.title}
@@ -162,24 +162,24 @@ const Certificates = () => (
                     }}
                   />
                 </div>
-                <div className="flex-1 min-w-0 text-center sm:text-left">
-                  <h3 className="text-foreground text-base sm:text-lg font-bold line-clamp-2 group-hover:text-primary transition-colors">
+                <div className="flex-1 w-full text-center">
+                  <h3 className="text-foreground text-sm sm:text-base font-bold line-clamp-2 group-hover:text-primary transition-colors leading-tight">
                     {cert.title}
                   </h3>
-                  <p className="text-primary/90 font-medium text-xs sm:text-sm mt-1">{cert.issuer}</p>
+                  <p className="text-primary/90 font-medium text-xs mt-1.5">{cert.issuer}</p>
                   <p className="text-muted-foreground text-xs mt-1">{cert.date}</p>
                 </div>
               </div>
-              <p className="text-muted-foreground text-xs sm:text-sm mt-2 line-clamp-3 grow text-center sm:text-left">
+              <p className="text-muted-foreground text-xs sm:text-sm mt-2 line-clamp-3 grow text-center">
                 {cert.description}
               </p>
-              <div className="flex gap-3 mt-auto pt-4 border-t border-border/50">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-auto pt-4 border-t border-border/50">
                 {cert.link && (
                   <a
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 text-center px-3 py-2 bg-gradient-to-r from-primary to-orange-500 text-primary-foreground rounded-lg text-xs sm:text-sm font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+                    className="flex-1 text-center px-3 py-2 bg-gradient-to-r from-primary to-orange-500 text-primary-foreground rounded-lg text-xs sm:text-sm font-semibold hover:shadow-lg transition-all duration-300 truncate"
                   >
                     View
                   </a>
@@ -188,7 +188,7 @@ const Certificates = () => (
                   href={cert.verificationLink || cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center px-3 py-2 border border-primary text-primary rounded-lg text-xs sm:text-sm font-semibold hover:bg-primary/10 transition-colors duration-300"
+                  className="flex-1 text-center px-3 py-2 border border-primary text-primary rounded-lg text-xs sm:text-sm font-semibold hover:bg-primary/10 transition-colors duration-300 truncate"
                 >
                   Verify
                 </a>
