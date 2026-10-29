@@ -10,7 +10,6 @@ const navItems = [
   { name: "Contact", href: "#contact" },
   { name: "Certificates", href: "#certificates" },
   { name: "Internships", href: "#Internships" },
-   
 ];
 
 export const Navbar = () => {
@@ -19,64 +18,61 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled
+          ? "py-3 bg-background/70 backdrop-blur-xl shadow-[0_10px_25px_rgba(0,0,0,0.12)] border-b border-white/10"
+          : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
+        <a className="text-lg sm:text-xl font-bold text-primary flex items-center" href="#hero">
           <span className="relative z-10">
-            <span className="text-glow text-foreground">Shambhuraj </span>{" "}
+            <span className="text-glow text-foreground">Shambhuraj </span>
             Portfolio
           </span>
         </a>
 
-        {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center gap-2 lg:gap-3">
           {navItems.map((item, key) => (
             <a
               key={key}
               href={item.href}
-              className="px-2 sm:px-2 md:px-3 py-1 rounded-full bg-[#23272f] text-white 
-              hover:bg-[#cd7c2e] transition-colors duration-200 shadow-md border border-[#333] text-sm sm:text-base font-semibold"
+              className="px-3 py-1.5 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/10 transition-all duration-200 border border-transparent hover:border-primary/30"
             >
               {item.name}
             </a>
           ))}
         </div>
 
-        {/* mobile nav */}
-
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
+          className="md:hidden p-2 text-foreground z-50 rounded-full hover:bg-white/5 transition-colors"
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col space-y-7 text-xl text-center">
             {navItems.map((item, key) => (
               <a
                 key={key}

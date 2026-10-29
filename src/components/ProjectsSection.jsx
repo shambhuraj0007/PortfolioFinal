@@ -4,53 +4,69 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "Article-Summarizer",
-    description: "A smart article summarizer that condenses long texts into concise summaries. Built to save time and improve reading efficiency.",
+    title: "Article Summarizer",
+    description:
+      "AI-powered article summarization app that turns long reads into crisp, actionable summaries in seconds.",
     image: "/assets/pr4.png",
     tags: ["JavaScript", "React", "AI"],
-    demoUrl: "https://shambhuraj.vercel.app",
+    demoUrl: "https://article-summarizer-inky.vercel.app/",
     githubUrl: "https://github.com/shambhuraj0007/Article-Summarizer",
   },
   {
     id: 2,
+    title: "ShortlistAI",
+    description:
+      "Smart resume optimization platform that helps users enhance ATS compatibility and improve job-fit scores.",
+    image: "/assets/pr3.png",
+    tags: ["Next.js", "AI", "Resume", "Optimization"],
+    demoUrl: "https://resume-optimizer-eta.vercel.app/",
+    githubUrl: "https://github.com/shambhuraj0007/ShortlistAI",
+  },
+  {
+    id: 3,
+    title: "Advanced RAG System",
+    description:
+      "A retrieval-augmented generation workflow that turns domain documents into a conversational assistant with grounded answers.",
+    image: "/assets/pr2.png",
+    tags: ["Python", "RAG", "LLM", "Streamlit"],
+    demoUrl: "https://advanced-appuction-ready-rag-system.streamlit.app/",
+    githubUrl: "https://github.com/shambhuraj0007/Advanced-RAG-System",
+  },
+  {
+    id: 4,
     title: "Plant Disease Detector",
-    description: "AI-powered app using deep learning to detect plant diseases. Built with Streamlit and TensorFlow for fast, accurate predictions.",
+    description:
+      "AI-powered app for plant disease detection using deep learning models for fast and reliable diagnosis.",
     image: "/assets/pr2.png",
     tags: ["Python", "TensorFlow", "Streamlit", "Deep Learning"],
     demoUrl: "https://plantdiseaserecognizer-jzekrenc97vzfddv3fa2fd.streamlit.app/",
     githubUrl: "https://github.com/shambhuraj0007/PlantDiseaseRecognizer",
   },
   {
-    id: 3,
-    title: "Vibly - Your Social Media Platform",
-    description: "Beautiful authentication and onboarding experience for Vibly using React, Tailwind CSS, Next.js, Framer Motion, and React Hook Form.",
+    id: 5,
+    title: "Vibly",
+    description:
+      "Modern social media platform concept with refined onboarding, sleek design, and engaging user experience.",
     image: "/assets/pr1.png",
     tags: ["React", "Next.js", "TailwindCSS", "Framer Motion"],
     demoUrl: "https://vibly-iota.vercel.app/",
     githubUrl: "https://github.com/shambhuraj0007/vibly",
   },
   {
-    id: 4,
+    id: 6,
     title: "PortfolioFinal",
-    description: "Modern, interactive personal portfolio website showcasing projects and skills. Features responsive design and dark mode.",
+    description:
+      "Responsive personal portfolio with immersive visuals, smooth animations, and polished user-centric sections.",
     image: "/assets/pr5.png",
     tags: ["JavaScript", "React", "TailwindCSS"],
     demoUrl: "https://portfolio-final-psi-seven.vercel.app/",
     githubUrl: "https://github.com/shambhuraj0007/PortfolioFinal",
   },
   {
-    id: 5,
-    title: "Car Price Predictor",
-    description: "Machine learning model to predict car prices based on features. Interactive UI for real-time predictions.",
-    image: "/assets/pr6.png",
-    tags: ["Python", "Jupyter Notebook", "Machine Learning"],
-    demoUrl: "https://car-price-predictor-two.vercel.app/",
-    githubUrl: "https://github.com/shambhuraj0007/car-price-predictor",
-  },
-  {
-    id: 6,
-    title: "ResumeItNow - AI Resume Builder",
-    description: "AI-powered resume builder with modern ATS-friendly templates, live preview, PDF export, and smart content suggestions.",
+    id: 7,
+    title: "ResumeItNow",
+    description:
+      "AI-driven resume builder with real-time preview, ATS-friendly templates, and smart writing suggestions.",
     image: "/assets/pr3.png",
     tags: ["Next.js", "TypeScript", "TailwindCSS"],
     demoUrl: "https://resume-virid-iota.vercel.app/",
@@ -69,72 +85,94 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
-    opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" }
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden w-full">
-      <motion.div 
+    <section
+      id="projects"
+      className="py-16 sm:py-24 px-3 sm:px-6 relative overflow-hidden w-full"
+    >
+      <motion.div
         className="w-full max-w-6xl mx-auto relative z-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
-        <motion.h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center px-2" variants={itemVariants}>
+        <motion.h2
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center px-2"
+          variants={itemVariants}
+        >
           Featured <span className="text-primary text-glow">Projects</span>
         </motion.h2>
 
-        <motion.p className="text-center text-muted-foreground mb-10 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-2" variants={itemVariants}>
-          Here are some of my recent projects. Each project was crafted with
-          attention to detail, performance, and user experience.
+        <motion.p
+          className="text-center text-muted-foreground mb-10 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-2"
+          variants={itemVariants}
+        >
+          A collection of products I’ve designed and built with performance,
+          creativity, and real-world utility in mind.
         </motion.p>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
           {projects.map((project, key) => (
             <motion.div
               key={key}
               variants={itemVariants}
-              className="glass-card rounded-xl sm:rounded-2xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,165,0,0.3)] border border-border/50"
+              className="group glass-card rounded-2xl overflow-hidden border border-primary/10 bg-white/5 dark:bg-white/5 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,165,0,0.35)] transition-all duration-500"
             >
-              <div className="overflow-hidden h-40 sm:h-48 relative shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="overflow-hidden h-44 sm:h-52 relative">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/400x200?text=Project+Preview';
+                    e.target.src = "https://via.placeholder.com/400x220?text=Project+Preview";
                   }}
                 />
               </div>
 
-              <div className="p-4 sm:p-6 relative z-20 flex flex-col grow">
+              <div className="p-4 sm:p-5 flex flex-col h-full">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 text-[10px] sm:text-xs uppercase tracking-wider font-semibold border border-primary/30 rounded-full bg-primary/10 text-primary transition-all duration-300 group-hover:border-primary/60"
+                      className="px-2 py-1 text-[10px] sm:text-xs uppercase tracking-wider font-semibold border border-primary/30 rounded-full bg-primary/10 text-primary"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">{project.title}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">
+                  {project.title}
+                </h3>
                 <p className="text-muted-foreground text-xs sm:text-sm mb-6 line-clamp-3">
                   {project.description}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-auto pt-4 border-t border-border/50">
-                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-                    <button className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition-all duration-300">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <button className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:opacity-90 transition-all duration-300">
                       <ExternalLink size={16} /> Demo
                     </button>
                   </a>
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
                     <button className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-300">
                       <Github size={16} /> Code
                     </button>
@@ -154,7 +192,7 @@ export const ProjectsSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Check My GitHub <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            Check My GitHub <ArrowRight size={20} />
           </motion.a>
         </motion.div>
       </motion.div>
